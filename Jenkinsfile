@@ -7,7 +7,7 @@ pipeline {
         git 'https://github.com/vpbobade/Ant-WebProject.git'
       }
     }
-        stage('Compile') { // Compile and do unit testing
+    stage('Compile') { // Compile and do unit testing
           script {
             def gradleHome = tool 'gradle6'
       }
