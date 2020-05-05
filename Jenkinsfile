@@ -9,10 +9,10 @@ pipeline {
     }
     stage('Compile') { // Compile and do unit testing
       def gradleHome = tool 'gradle6'
-    
+      steps {
        // run Gradle to execute compile and unit testing
-      sh "'${gradleHome}/bin/gradle' clean compileJava test"
+        sh "'${gradleHome}/bin/gradle' clean compileJava test"
       }
     }
   }
-
+}
