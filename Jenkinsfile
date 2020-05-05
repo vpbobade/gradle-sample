@@ -13,7 +13,7 @@ pipeline {
       }
       steps {
         // run Gradle to execute compile and unit testing
-        sh 'gradle clean compileJava test --debug --stacktrace'
+        sh '/usr/local/bin/gradle clean compileJava test --info'
       }
     }
   }
