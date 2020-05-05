@@ -10,7 +10,7 @@ pipeline {
     stage('Compile') { // Compile and do unit testing
       steps {
         // run Gradle to execute compile and unit testing
-        sh "/opt/gradle clean compileJava test"
+        sh "/usr/bin/gradle clean compileJava test"
       }
     }
   }
