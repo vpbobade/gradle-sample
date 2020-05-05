@@ -1,3 +1,5 @@
+def gradleHome = tool 'gradle6'
+
 pipeline {
   agent { label 'master' }
   stages {
@@ -8,9 +10,6 @@ pipeline {
       }
     }
     stage('Compile') { // Compile and do unit testing
-          script {
-            def gradleHome = tool 'gradle6'
-      }
       steps {
         // run Gradle to execute compile and unit testing
         sh "'${gradleHome}/bin/gradle' clean compileJava test"
