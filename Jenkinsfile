@@ -13,7 +13,7 @@ pipeline {
       }
       steps {
         // run Gradle to execute compile and unit testing
-        sh 'gradle clean compileJava test'
+        sh "'${gradleHome}/bin/gradle' clean compileJava test"
       }
     }
   }
