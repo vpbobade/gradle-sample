@@ -1,4 +1,5 @@
 pipeline {
+  aagent { label 'master' }
   stages {
     stage('Source') { // Get code
       steps {
