@@ -8,9 +8,12 @@ pipeline {
       }
     }
     stage('Compile') { // Compile and do unit testing
+      tools {
+        gradle 'gradle6'
+      }
       steps {
         // run Gradle to execute compile and unit testing
-        sh "/usr/bin/gradle clean compileJava test"
+        sh '/usr/bin/gradle clean compileJava test'
       }
     }
   }
