@@ -1,5 +1,5 @@
 pipeline {
-  agent { label 'worker_node1' }
+  agent { any }
   stages {
     stage('Source') { // Get code
       steps {
