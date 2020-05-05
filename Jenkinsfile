@@ -4,7 +4,7 @@ pipeline {
     stage('Source') { // Get code
       steps {
         // get code from our Git repository
-        git 'https://github.com/vpbobade/maven-project.git'
+        git 'https://github.com/vpbobade/Ant-WebProject.git'
       }
     }
     stage('Compile') { // Compile and do unit testing
