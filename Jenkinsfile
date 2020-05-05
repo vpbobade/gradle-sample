@@ -9,11 +9,11 @@ pipeline {
     }
     stage('Compile') { // Compile and do unit testing
       tools {
-        gradle 'gradle6'
+        gradle 'gradle6.4'
       }
       steps {
         // run Gradle to execute compile and unit testing
-        sh '${GRADLE_HOME}/gradle clean compileJava test'
+        sh 'gradle clean compileJava test'
       }
     }
   }
